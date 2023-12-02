@@ -1,6 +1,6 @@
 # SER-531-Team25
 
-##How to setup Fuseki server and host it on an AWS instance:
+## How to setup Fuseki server and host it on an AWS instance:
 
 1. Aquire a free AWS ec2 instance, create a public key and ssh into the machine. Follow this tutorial: https://www.bobdc.com/blog/ec2fuseki/
 2. Install Apache Jena Fuseki and install java on the machine (Steps in the above tutorial)
