@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import PlacesAutocomplete from 'react-places-autocomplete';
+import axios from 'axios';
+import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
+import { useRouter } from 'next/router';
 import styles from './FormWithAutocomplete.module.scss';
 
-const FormWithAutoComplete = () => {
+const FormWithAutocomplete = () => {
+  const router = useRouter();
   const [formData, setFormData] = useState({
-    from: '',
-    to: '',
+    source: '',
+    destination: '',
   });
 
   const handleInputChange = (name, value) => {
@@ -15,29 +18,56 @@ const FormWithAutoComplete = () => {
     }));
   };
 
-  const handleSelect = (name, address) => {
+  const handleSelect = async (name, address) => {
+    const results = await geocodeByAddress(address);
+    const latLng = await getLatLng(results[0]);
+    console.log(`Selected ${name}:`, latLng);
+
     setFormData((prevData) => ({
       ...prevData,
       [name]: address,
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+
+    const apiUrl = 'http://localhost:8080/route';
+
+    try {
+      const response = await axios.get(apiUrl, {
+        params: {
+          source: formData.source,
+          destination: formData.destination,
+        },
+      });
+
+      if (response.data.success) {
+        console.log('API Response:', response.data);
+
+        router.push({
+          pathname: '/successPage',
+          query: { responseData: JSON.stringify(response.data) },
+        });
+      } else {
+        console.error('API Error:', response.data.error);
+      }
+    } catch (error) {
+      console.error('API Request Error:', error);
+    }
   };
 
   return (
     <div className={styles.container}>
       <div className={styles.formContainer}>
-        <h1 className={styles.formTitle}>Find Nearby Gas Station</h1>
+        <h1 className={styles.formTitle}>Travel Information Form</h1>
         <div className={styles.inputContainer}>
           <label className={styles.label}>
-            From:
+            Source:
             <PlacesAutocomplete
-              value={formData.from}
-              onChange={(value) => handleInputChange('from', value)}
-              onSelect={(value) => handleSelect('from', value)}
+              value={formData.source}
+              onChange={(value) => handleInputChange('source', value)}
+              onSelect={(value) => handleSelect('source', value)}
             >
               {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
                 <div className={styles.autocompleteContainer}>
@@ -62,11 +92,11 @@ const FormWithAutoComplete = () => {
         </div>
         <div className={styles.inputContainer}>
           <label className={styles.label}>
-            To:
+            Destination:
             <PlacesAutocomplete
-              value={formData.to}
-              onChange={(value) => handleInputChange('to', value)}
-              onSelect={(value) => handleSelect('to', value)}
+              value={formData.destination}
+              onChange={(value) => handleInputChange('destination', value)}
+              onSelect={(value) => handleSelect('destination', value)}
             >
               {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
                 <div className={styles.autocompleteContainer}>
@@ -90,7 +120,7 @@ const FormWithAutoComplete = () => {
           </label>
         </div>
         <div className={styles.centerSubmitButton}>
-          <button type="submit" className={styles.submitButton}>
+          <button type="button" className={styles.submitButton} onClick={handleSubmit}>
             Submit
           </button>
         </div>
@@ -99,4 +129,4 @@ const FormWithAutoComplete = () => {
   );
 };
 
-export default FormWithAutoComplete;
+export default FormWithAutocomplete;
