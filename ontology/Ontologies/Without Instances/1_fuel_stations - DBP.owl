@@ -1,0 +1,457 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station/"
+     xml:base="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dbpedia="https://dbpedia.org/ontology/locationCity#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#containsStation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#containsStation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Location"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Station"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#hasCity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#hasCity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Station"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#cityName"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#hasOpeningHours -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#hasOpeningHours">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Station"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#accessDaysTime"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#hasState -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#hasState">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Station"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#stateName"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#hasType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#hasType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Station"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Fuel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#locatedAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#locatedAt">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Station"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#accessCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#accessCode">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Station"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#accessDaysTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#accessDaysTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Station"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#bdBlends -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#bdBlends">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#BD"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#cityName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#cityName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#cngFillTypeCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#cngFillTypeCode">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#CNG"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#cngRenewableSource -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#cngRenewableSource">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#CNG"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#cngVehicleClass -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#cngVehicleClass">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#CNG"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#evConnectorType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#evConnectorType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#EV"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#evNetwork -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#evNetwork">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#EV"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#evNetworkWeb -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#evNetworkWeb">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#EV"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#evRenewableSource -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#evRenewableSource">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#EV"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#fuelTypeCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#fuelTypeCode">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Fuel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#geocodeStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#geocodeStatus">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#hyIsRetail -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#hyIsRetail">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#HY"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#hyPressure -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#hyPressure">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#HY"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#hyStandards -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#hyStandards">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#HY"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#hyStatusLink -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#hyStatusLink">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#HY"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#isRenewable -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#isRenewable">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Fuel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#latitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#latitude">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#longitutde -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#longitutde">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#openDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#openDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Station"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#plus4 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#plus4">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#stateName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#stateName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#stationID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#stationID">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Station"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#stationName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#stationName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Station"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#stationPhone -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#stationPhone">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Station"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#statusCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#statusCode">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Station"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#zipcode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#zipcode">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#BD -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#BD">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Fuel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#CNG -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#CNG">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Fuel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#EV -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#EV">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Fuel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Fuel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Fuel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#HY -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#HY">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Fuel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Location"/>
+    
+
+
+    <!-- http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Station -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/poppin220ug/ontologies/2023/10/fuel_station#Station"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
