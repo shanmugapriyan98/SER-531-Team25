@@ -1,38 +1,0 @@
-
-o
-java:S3776""RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(ËàÙ„8äİëâÂ1
-a
-java:S1854/"?Remove this useless assignment to local variable "endLocation".(‡äè°úÿÿÿÿ8†ŞëâÂ1
-^
-java:S1854."ARemove this useless assignment to local variable "startLocation".(˜”ÅŞ8‡ŞëâÂ1
-{
-java:S2142Q"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾8ÜÆâÂ1
-O
-java:S1481."2Remove this unused "startLocation" local variable.(˜”ÅŞ8µŞëâÂ1
-R
-java:S1481/"0Remove this unused "endLocation" local variable.(‡äè°úÿÿÿÿ8¶ŞëâÂ1
-W	java:S125J"<This block of commented-out lines of code should be removed.(…×ˆX8»²ÉâÂ1
-W
-java:S1874l"5Remove this use of "sparqlService"; it is deprecated.(·‚ŸŠşÿÿÿÿ8Ø¹›ãÂ1
-W
-java:S1874"5Remove this use of "sparqlService"; it is deprecated.(·‚ŸŠşÿÿÿÿ8è¹›ãÂ1
-T
-java:S1128"7Remove this unused import 'com.google.gson.JsonObject'.(µÊ´½8ö¹›ãÂ1
-S
-java:S1128
-"6Remove this unused import 'com.google.gson.JsonArray'.(ÎöêŠ8ø¹›ãÂ1
-T
-java:S1128"7Remove this unused import 'com.google.gson.JsonParser'.(Œƒ¸Æ8ù¹›ãÂ1
-R
-java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8ı¹›ãÂ1
-M
-java:S1128"0Remove this unused import 'java.io.InputStream'.(¹»º8€º›ãÂ1
-S
-java:S1128"6Remove this unused import 'java.io.InputStreamReader'.(ãˆÎÉ8‚º›ãÂ1
-K
-java:S1128")Remove this unused import 'java.net.URL'.(ñìÁ„üÿÿÿÿ8„º›ãÂ1
-P
-java:S1144h"4Remove this unused private "getFuelStations" method.(ÍãîN8‰º›ãÂ1
-U
-java:S1144{"3Remove this unused private "getRestaurants" method.(òÁ¸úÿÿÿÿ8‹º›ãÂ1
-osecrets:S6334"OMake sure this Google API Key gets revoked, changed, and removed from the code.(×˜ÙÕ8Â°ëßÂ1
