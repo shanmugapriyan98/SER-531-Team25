@@ -2,10 +2,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     background-image: url('/gas-station.jpg');
-    background-size: cover; /* Adjust as needed */
-    background-position: center; /* Adjust as needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   
   .formContainer {

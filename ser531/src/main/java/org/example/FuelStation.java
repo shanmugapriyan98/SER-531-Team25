@@ -2,7 +2,17 @@ package org.example;
 
 public class FuelStation {
     String name;
-    String location;
+    String city;
+
+    public String getFuelCode() {
+        return fuelCode;
+    }
+
+    public void setFuelCode(String fuelCode) {
+        this.fuelCode = fuelCode;
+    }
+
+    String fuelCode;
 
     public String getName() {
         return name;
@@ -12,11 +22,11 @@ public class FuelStation {
         this.name = name;
     }
 
-    public String getLocation() {
-        return location;
+    public String getCity() {
+        return city;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setCity(String city) {
+        this.city = city;
     }
 }

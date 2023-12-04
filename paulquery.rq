@@ -1,0 +1,9 @@
+PREFIX s:     <http://learningsparql.com/ns/schema/> 
+PREFIX i:     <http://learningsparql.com/ns/instrument/> 
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX m:     <http://learningsparql.com/ns/musician/> 
+SELECT ?title WHERE { 
+  ?song a s:Song ;
+  i:leadguitar m:PaulMcCartney .
+  ?song rdfs:label ?title . 
+}
