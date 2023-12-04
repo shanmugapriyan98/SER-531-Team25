@@ -9,3 +9,7 @@
 5. Use tdbloader to load data into the database.
 6. Try some queries on the apache jena fuseki endpoint to check if its working
 
+We then loaded our data files(Station and Restaurants) in Turtle Syntax format. After restarting the Fuseki server we need are able to see the loaded triples and use the SPARQL interface to query the uploaded data. 
+
+
+
