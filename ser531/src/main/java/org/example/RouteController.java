@@ -173,7 +173,7 @@ public class RouteController {
 
 
         Query query = QueryFactory.create(queryStr);
-        try (QueryExecution qexec = QueryExecutionFactory.sparqlService("http://3.22.112.162:3030/abc", query)) {
+        try (QueryExecution qexec = QueryExecutionFactory.sparqlService("http://13.59.179.215/abc", query)) {
             ResultSet results = qexec.execSelect();
             List<QuerySolution> solutions = ResultSetFormatter.toList(results);
             for (QuerySolution solution : solutions) {
@@ -227,7 +227,7 @@ public class RouteController {
 
 
         Query query = QueryFactory.create(queryStr);
-        try (QueryExecution qexec = QueryExecutionFactory.sparqlService("http://3.22.112.162:3030/abc", query)) {
+        try (QueryExecution qexec = QueryExecutionFactory.sparqlService("http://13.59.179.215/abc", query)) {
             ResultSet results = qexec.execSelect();
             List<QuerySolution> solutions = ResultSetFormatter.toList(results);
             for (QuerySolution solution : solutions) {
