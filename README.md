@@ -1,4 +1,4 @@
-# SER-531-Team25
+# Intelligent Route Optimization System
 ## RUN INSTRUCTIONS:
 1. <b>Starting backend</b>: Go to ser531 folder, Do mvn clean install for the whole project first., run the Application.java file, you can see the spring boot application started message. It will run in server 8080.
 2. <b>Starting front end</b>: Assuming you have all the necessary packages installed, run npm run dev. Your front end application will now start in server 3030.
